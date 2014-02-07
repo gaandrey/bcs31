@@ -6,10 +6,10 @@
         <div class="service clearfix">
           <div class="service_icon"><%= image_tag('open_box.png') %></div>
           <div class="desc">
-            <div class="desc_header">
+            <!--<div class="desc_header">-->
               <h4>Расчёт</h4>
               <h4 class="deliv_header">стоимости</h4>
-            </div>
+            <!--</div>-->
           </div>
         </div>
       </a>
@@ -19,11 +19,11 @@
          target="go_indexes_iframe">
         <div class="service clearfix">
           <div class="service_icon postmark"><%= image_tag('postmark.png') %></div>
-          <div class="desc">
-            <div class="desc_header indexes">
+          <div class="desc indexes">
+            <!--<div class="desc_header indexes">-->
                 <h4 class="postal_link indexes"><span>Почтовые</span></h4>
                 <h4 class="postal_link deliv_header"><span>индексы</span></h4>
-            </div>
+            <!--</div>-->
           </div>
         </div>
       </a>
@@ -33,10 +33,10 @@
         <div class="service clearfix">
           <div class="service_icon"><%= image_tag('archive.png') %></div>
           <div class="desc">
-            <div class="desc_header">
+            <!--<div class="desc_header">-->
               <h4>Основные</h4>
               <h4 class="under_link deliv_header">документы</h4>
-            </div>
+            <!--</div>-->
           </div>
         </div>
       </a>
@@ -46,10 +46,10 @@
         <div class="service clearfix">
           <div class="service_icon zoomer"><%= image_tag('zoom.png') %></div>
           <div class="desc">
-            <div class="desc_header">
+            <!--<div class="desc_header">-->
               <h4>Состояние</h4>
               <h4 class="deliv_header">доставки</h4>
-            </div>
+            <!--</div>-->
           </div>
         </div>
       </a>
@@ -64,17 +64,48 @@
   </div>
   <%= render 'news_pages/list' %>
 </div>
+        <!--///////////////INDEXES////////////////-->
     <div class="indexes_wrapper container">
       <div class="indexes_iframe_container">
-        <%= link_to(image_tag("close-42928_150.png",  class: "closing_cross indexes")) %>
-        <iframe src="" name="go_indexes_iframe" id="indexes_iframe" style="overflow: scroll;"></iframe>
+
+        <!--//progressbar<!--INDEXES-->
+        <div class="pace indexes pace-inactive-indexes">
+          <div class="nprogress">
+            <div class="pace-progress bar" role="bar" style="width: 100%;">
+              <div class="pace-progress-inner"></div>
+            </div>
+          </div>
+          <div class="pace-activity"></div>
+        </div>
+        <!--//progressbar INDEXES-->
+
+        <%= link_to(image_tag("close-index.png",  class: "closing_cross index")) %>
+        <iframe onload="$.app.finish_and_reset();" src="" name="go_indexes_iframe" id="indexes_iframe"></iframe>
+        <div class="blank_overlay_indexes"></div>
       </div>
     </div>
+
+       <!--TRACKING-->
     <div class="tracking_wrapper container">
-      <div class="tracking_iframe_container">
-        <%= link_to(image_tag("close-42928_150.png",  class: "closing_cross tracking")) %>
-        <iframe src="" name="go_tracking_iframe" id="tracking_iframe"></iframe>
+      <div class="tracking_iframe_container" style="overflow-y: scroll;">
+
+        <!--//progressbar TRACKING --->
+        <div class="pace pace-inactive-indexes">
+          <div class="nprogress">
+            <div class="pace-progress bar" role="bar" style="width: 100%;">
+              <div class="pace-progress-inner"></div>
+            </div>
+          </div>
+          <div class="pace-activity" ></div>
+        </div>
+          <!--progressbar TRACKING-->
+
+          <%= link_to(image_tag("close-track.png",  class: "closing_cross tracking")) %>
+          <iframe onload="$.app.finish_and_reset();" src="" name="go_tracking_iframe" id="tracking_iframe"></iframe>
+          <div class="blank_overlay_tracking"></div>
+            <!--<div class="blank_overlay_tracking"></div>-->
       </div>
     </div>
-<!--style="position: absolute;-->
-<!--clip: rect(0px, 1000px, 850px, 0px);">-->
+<script>
+
+</script>

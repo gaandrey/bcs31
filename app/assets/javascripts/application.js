@@ -9,7 +9,7 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-//
+//= require pace/pace
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
@@ -26,5 +26,6 @@
 //= require page
 //= require yandex_maps_init
 //= require insertionQ/insQ
+//= require nprogress/nprogress
 //= require_tree .
 

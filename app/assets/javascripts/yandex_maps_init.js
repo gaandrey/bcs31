@@ -63,15 +63,11 @@ function init() {
             balloonContent: '308023, г.Белгород, ул.Железнякова, д.14Б'
         }
     );
-    // Открываем балун на карте (без привязки к геообъекту).
-    myMap.balloon.open([50.6334900, 36.576210], '308023, г.Белгород, ул.Железнякова, д.14Б', {
-        // Опция: не показываем кнопку закрытия.
-        closeButton: true
+
+    myMap.balloon.events.add('close', function(){
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
     });
-
-    // Добавление метки на карту
-    myMap.geoObjects.add(myPlacemark);
-
 
     // элемента управления и его параметры.
     myMap.controls
@@ -93,7 +89,20 @@ function init() {
             type: 'yandex#publicMap'
         }));
 
+//    Открываем балун на карте (без привязки к геообъекту).
+    myMap.balloon.open([50.6334900, 36.576210], '308023, г.Белгород, ул.Железнякова, д.14Б', {
+//        Опция: не показываем кнопку закрытия.
+        closeButton: true
+    });
+
+
+
+
+
+//    myMap.closeBalloon
+//    myMap.balloon.close();
 }
+
     function init2() {
     var myMap = new ymaps.Map("map2", {
         center: [51.307, 37.868885],
@@ -150,6 +159,11 @@ function init() {
             closeButton: true
         });
 
+    myMap.balloon.events.add('close', function(){
+        // Добавление метки на карту
+        myMap.geoObjects.add(myPlacemark);
+    });
+
     // Добавляем многоугольник на карту.
     myMap.geoObjects.add(myGeoObject);
         // Создание метки
@@ -160,10 +174,6 @@ function init() {
                 balloonContent: 'Старый Оскол, ул Прядченко, д.118 оф 34'
             }
         );
-
-        // Добавление метки на карту
-        myMap.geoObjects.add(myPlacemark);
-
 
         // элемента управления и его параметры.
         myMap.controls
@@ -179,10 +189,19 @@ function init() {
         var trafficControl = new ymaps.control.TrafficControl();
         myMap.controls
 //        .add(trafficControl)
+
             // В конструкторе элемента управления можно задавать расширенные
             // параметры, например, тип карты в обзорной карте.
             .add(new ymaps.control.MiniMap({
                 type: 'yandex#publicMap'
             }));
 
+
 }
+
+
+
+
+
+
+
