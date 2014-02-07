@@ -24,7 +24,7 @@
 //= require respond
 //= require rails.validations
 //= require page
-//= require yandex_maps_init
+// require yandex_maps_init
 //= require insertionQ/insQ
 //= require nprogress/nprogress
 //= require_tree .

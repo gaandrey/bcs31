@@ -21,6 +21,7 @@ gem "font-awesome-rails"
 gem 'enumerize', github: 'brainspec/enumerize'
 gem "recaptcha", :require => "recaptcha/rails"
 gem 'activeadmin-sortable'
+gem 'ruby-debug-ide', :require => 'rake'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -74,6 +75,7 @@ group :development do
   gem 'rvm-capistrano', github: 'wayneeseguin/rvm-capistrano'
   gem 'capistrano-helpers'
 
+  
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rack-mini-profiler'

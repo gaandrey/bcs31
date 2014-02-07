@@ -1,52 +1,16 @@
 $(window).load(function() {
-    var v_port;
-//    alert('ready');
-
-
-     var num = 0;
-    $.app =  $.app || {};
-
-    $.app.finish_and_reset = function(){
-        NProgress.done();
-        alert('Hey!');
-        $('.pace-inactive-indexes div:first').each(function(){
-            num += 1;
-            console.log(num);
-            $(this).addClass('nprogress');
-        });
-    };
-
-//    $.app.count_progress = function(){
-//        alert("hey");
-//        var repeat = 0;
-//        var i = 1;
-////        console.log(i);
-//        function myLoop () {
-////            console.log("Repeat: " + repeat);
-//            setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-//                var matrix = $('[role="bar"]').css('WebkitTransform');
-//                var values = matrix.match(/-?[0-9\.]+/g);
-//                if (values != null) {
-//                    var curvalol = values[4];
-////                    alert("hey");
-//                }
-//                alert("hey");
-//                console.log(i);
-//                console.log(values);
-//                console.log(curvalol);
-////            if (index_flag == 1 && curvalol <= -790){
-////                $('.blank_overlay_indexes').css('display', 'none');
-////            } else if (tracking_flag == 1 &&  curvalol <= -470 ){
-////                $('.blank_overlay_tracking').css('display', 'none');
-////            }
-//                i++;                                 //  increment the counter
-//                if (i < 600) {                       //  if the counter < 10, call the loop function
-//                    myLoop();                         //  ..  again which will trigger another
-//                }                                   //  ..  setTimeout()
-//            }, 200)
+//    var v_port;
+//     var num = 0;
+//    $.app =  $.app || {};
 //
-//        }
-//    }
+//    $.app.finish_and_reset = function(){
+//        NProgress.done();
+//        $('.pace-inactive-indexes div:first').each(function(){
+//            num += 1;
+//            console.log(num);
+//            $(this).addClass('nprogress');
+//        });
+//    };
 
 
      //////////////////  callus iframe
